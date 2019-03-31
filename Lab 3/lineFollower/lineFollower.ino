@@ -1,3 +1,5 @@
+// line following code made by Lab Group 3 for RBE 1001.
+
 #include <Servo.h> // use servo library
 
 Servo rightmotor;   // declare servo object
