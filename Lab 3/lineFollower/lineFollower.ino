@@ -1,4 +1,5 @@
-// line following code made by Lab Group 3 for RBE 1001.
+// ***line following code made by Lab Group 3 for RBE 1001.***
+// use setup section below to make changes to robot behaviour
 
 #include <Servo.h> // use servo library
 
@@ -7,15 +8,15 @@ Servo leftmotor;    // declare servo object
 
 //***Start of setup***
 
-int leftMotorPin = 10;        // pin used to interface with the LEFT motor
-int rightMotorPin = 11;       // pin used to interface with the RIGHT motor
-int inputPin = 2;             // digital pin number to read sensor input from
-int velocity = 70;            // constant that determines speed, value from 0 to 90
-int jerk = 20;                // constant that determines how agressive the robot will react to line changes, values from 0 to 100, higher values mean more agressive correction
-int refresh = 100;            // delays loop by input in milliseconds
-bool highWhenOnLine = true;   // whether the sensor is in an ON state when sensing the BLACK line
-bool outsideFollow = true;    // if the robot will should the line on the outside enter TRUE, enter FALSE if the robot should follow the inside
-bool clockwiseFollow = true;  // if the robot will should the line clockwise enter TRUE, enter FALSE for anticlockwise motion
+const int leftMotorPin = 10;        // pin used to interface with the LEFT motor
+const int rightMotorPin = 11;       // pin used to interface with the RIGHT motor
+const int inputPin = 2;             // digital pin number to read sensor input from
+const int velocity = 70;            // constant that determines speed, value from 0 to 90
+const int jerk = 20;                // constant that determines how agressive the robot will react to line changes, values from 0 to 100, higher values mean more agressive correction
+const int refresh = 100;            // delays loop by input in milliseconds
+const bool highWhenOnLine = true;   // whether the sensor is in an ON state when sensing the BLACK line
+const bool outsideFollow = true;    // if the robot will should the line on the outside enter TRUE, enter FALSE if the robot should follow the inside
+const bool clockwiseFollow = true;  // if the robot will should the line clockwise enter TRUE, enter FALSE for anticlockwise motion
 
 //***End of setup***
 
@@ -88,11 +89,3 @@ void drive(int velocity, int slowerVelocity, bool onLine, bool correctLeft){ // 
     Serial.println("Correcting Right");  // print correction direction to serial port
   }
 } 
-  
-  
-
-  
-  
-
-
-
